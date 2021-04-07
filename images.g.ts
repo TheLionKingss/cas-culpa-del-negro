@@ -622,25 +622,6 @@ cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc
 . . . . . f f f f f f f . . . . 
 . . . . . . . . . f f f . . . . 
 `;
-            case "image6":
-            case "Martin_1":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f f . . . . 
-. . . . f f f f f f f f f . . . 
-. . . f f f f f f f f f f f . . 
-. . . f f f f f f f f f f f . . 
-. . . f f f f f f f f f f f f . 
-. . . f f f f f f f f f f f f . 
-. . f f f f f f f e e e f f f . 
-. . f f e 4 4 e b 8 4 4 e e f . 
-. . f e e 4 d 4 1 8 d d e f . . 
-. . . f e e e 4 d d d d f . . . 
-. . . . 4 d d e 4 4 4 e f . . . 
-. . . . e d d e 6 6 6 6 f . . . 
-. . . . f e e f 9 9 9 9 f f . . 
-. . . . f f f f f f f f f f . . 
-. . . . . f f . . . f f f . . . 
-`;
             case "image10":
             case "Martin_5":return img`
 . . . . . . . . . . . . . . . . 
@@ -754,25 +735,6 @@ cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc
 . . f f 9 9 f e e f f f . . . . 
 . . f f f f f f f f f f . . . . 
 . . . f f f . . . f f . . . . . 
-`;
-            case "image11":
-            case "Martin_6":return img`
-. . . . . . . . . . . . . . . . 
-. . . . f f f f f f . . . . . . 
-. . . f f f f f f f f . . . . . 
-. . f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f . . . 
-. f f f f f f f f f f f f . . . 
-. f f f e e e f f f f f f f . . 
-. f e e 4 4 8 b e 4 4 e f f . . 
-. . f e d d 8 1 4 d 4 e e f . . 
-. . . f d d d d 4 e e e f . . . 
-. . . f e 4 4 4 e e f f . . . . 
-. . . f 6 6 6 e d d 4 . . . . . 
-. . . f 6 6 6 e d d e . . . . . 
-. . . f 9 9 9 f e e f . . . . . 
-. . . . f f f f f f . . . . . . 
-. . . . . . f f f . . . . . . . 
 `;
             case "image22":
             case "Esteban_2":return img`
@@ -925,6 +887,44 @@ cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc
 . . 4 4 f 9 9 9 9 9 9 f 4 4 . . 
 . . . . . f f f f f f . . . . . 
 . . . . . f f . . f f . . . . . 
+`;
+            case "image6":
+            case "Martin_1":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f f . . . . 
+. . . . f f f f f f f f f . . . 
+. . . f f f f f f f f f f f . . 
+. . . f f f f f f f f f f f . . 
+. . . f f f f f f f f f f f f . 
+. . . f f f f f f f f f f f f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b 8 4 4 e e f . 
+. . f e e 4 d 4 1 8 d d e f . . 
+. . . f e e e e e d d d f . . . 
+. . . . . f 4 d d e 4 e f . . . 
+. . . . . f e d d e 6 6 f . . . 
+. . . . f f f e e f 9 9 f f . . 
+. . . . f f f f f f f f f f . . 
+. . . . . f f . . . f f f . . . 
+`;
+            case "image11":
+            case "Martin_6":return img`
+. . . . . . . . . . . . . . . . 
+. . . f f f f f f f f . . . . . 
+. . . f f f f f f f f f . . . . 
+. . f f f f f f f f f f . . . . 
+. f f f f f f f f f f f f . . . 
+. f f f f f f f f f f f f . . . 
+. f f f e e e f f f f f f f . . 
+. f e e 4 4 8 b e 4 4 e f f . . 
+. . f e d d 8 1 4 d 4 e e f . . 
+. . . f d d d d 4 e e e f . . . 
+. . . f e 4 4 4 e e f f . . . . 
+. . . f 6 6 6 e d d 4 . . . . . 
+. . . f 6 6 6 e d d e . . . . . 
+. . . f 9 9 9 f e e f . . . . . 
+. . . . f f f f f f . . . . . . 
+. . . . . . f f f . . . . . . . 
 `;
         }
         return null;

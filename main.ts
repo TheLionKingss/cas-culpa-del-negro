@@ -10,7 +10,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
             pause(100)
             mySprite.setImage(assets.image`Martin_10`)
             pause(100)
-            mySprite.setImage(assets.image`Martin_14`)
+            mySprite.setImage(assets.image`Martin_7`)
             pause(100)
         }
     } else if (Esteban) {
@@ -98,6 +98,14 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (
             PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
             tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
         }
+    } else if (tiles.tileAtLocationEquals(tiles.getTileLocation(64, 25), sprites.builtin.forestTiles10)) {
+        tiles.setTilemap(tilemap`Laberinto_map2`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(84, 38))
+        Map = 2
+        Y_CheckPoint = 84
+        X_CheckPoint = 38
+        pause(100)
+        music.playMelody("E - E - E - E - ", 640)
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
@@ -175,12 +183,12 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Martin`, function (sprite, lo
 })
 let PersonajeSec2: Sprite = null
 let PersconajeSec1: Sprite = null
-let X_CheckPoint = 0
-let Y_CheckPoint = 0
-let Map = 0
 let projectile: Sprite = null
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
+let X_CheckPoint = 0
+let Y_CheckPoint = 0
+let Map = 0
 let Esteban = false
 let Carla = false
 let Martin = false
@@ -189,7 +197,25 @@ GAME_OVER = false
 Martin = true
 Carla = false
 Esteban = false
-tiles.setTilemap(tilemap`Character_selection`)
+Map = 4
+Y_CheckPoint = 3
+X_CheckPoint = 3
+if (Map == 1) {
+    tiles.setTilemap(tilemap`Map1`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+} else if (Map == 2) {
+    tiles.setTilemap(tilemap`Laberinto_map2`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+} else if (Map == 3) {
+    tiles.setTilemap(tilemap`Map1`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+} else if (Map == 4) {
+    tiles.setTilemap(tilemap`Character_selection`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+} else {
+    tiles.setTilemap(tilemap`Map1`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+}
 mySprite = sprites.create(assets.image`Martin_9`, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
@@ -202,18 +228,8 @@ game.onUpdateInterval(500, function () {
         if (CheckPoint == false) {
             game.over(false, effects.blizzard)
             game.reset()
-        } else if (CheckPoint) {
-            if (Map == 1) {
-                tiles.setTilemap(tilemap`Map1`)
-            } else if (Map == 2) {
-                tiles.setTilemap(tilemap`Laberinto_map2`)
-            } else if (Map == 3) {
-                tiles.setTilemap(tilemap`Map1`)
-            } else if (Map == 4) {
-                tiles.setTilemap(tilemap`Map1`)
-            } else {
-                tiles.setTilemap(tilemap`Map1`)
-            }
+        } else if (false) {
+        	
         }
     }
 })
