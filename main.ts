@@ -42,6 +42,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Carla`, function (sprite, loc
     Esteban = false
     Carla = true
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorLightMoss, function (sprite, location) {
+    statusbar.value += -0.5
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`Proyectile_of_sorts`, mySprite, 69, 0)
     music.pewPew.play()
@@ -74,6 +77,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (
     if (tiles.tileAtLocationEquals(tiles.getTileLocation(17, 5), sprites.builtin.forestTiles10) || tiles.tileAtLocationEquals(tiles.getTileLocation(17, 4), sprites.builtin.forestTiles10)) {
         tiles.setTilemap(tilemap`Map1`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(15, 59))
+        Map = 1
+        Y_CheckPoint = 21
+        X_CheckPoint = 42
         pause(100)
         music.playMelody("E - E - E - E - ", 640)
         if (Martin) {
@@ -95,8 +101,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
-    game.over(false)
-    game.reset()
+    GAME_OVER = true
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Martin) {
@@ -170,11 +175,17 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Martin`, function (sprite, lo
 })
 let PersonajeSec2: Sprite = null
 let PersconajeSec1: Sprite = null
+let X_CheckPoint = 0
+let Y_CheckPoint = 0
+let Map = 0
 let projectile: Sprite = null
+let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 let Esteban = false
 let Carla = false
 let Martin = false
+let GAME_OVER = false
+GAME_OVER = false
 Martin = true
 Carla = false
 Esteban = false
@@ -182,6 +193,27 @@ tiles.setTilemap(tilemap`Character_selection`)
 mySprite = sprites.create(assets.image`Martin_9`, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
-let statusbar = statusbars.create(16, 2, StatusBarKind.Health)
+statusbar = statusbars.create(16, 2, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite)
 statusbar.value = 200
+game.onUpdateInterval(500, function () {
+    if (GAME_OVER != false) {
+        let CheckPoint = false
+        if (CheckPoint == false) {
+            game.over(false, effects.blizzard)
+            game.reset()
+        } else if (CheckPoint) {
+            if (Map == 1) {
+                tiles.setTilemap(tilemap`Map1`)
+            } else if (Map == 2) {
+                tiles.setTilemap(tilemap`Laberinto_map2`)
+            } else if (Map == 3) {
+                tiles.setTilemap(tilemap`Map1`)
+            } else if (Map == 4) {
+                tiles.setTilemap(tilemap`Map1`)
+            } else {
+                tiles.setTilemap(tilemap`Map1`)
+            }
+        }
+    }
+})
