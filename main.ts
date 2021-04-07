@@ -200,22 +200,8 @@ Esteban = false
 Map = 4
 Y_CheckPoint = 3
 X_CheckPoint = 3
-if (Map == 1) {
-    tiles.setTilemap(tilemap`Map1`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-} else if (Map == 2) {
-    tiles.setTilemap(tilemap`Laberinto_map2`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-} else if (Map == 3) {
-    tiles.setTilemap(tilemap`Map1`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-} else if (Map == 4) {
-    tiles.setTilemap(tilemap`Character_selection`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-} else {
-    tiles.setTilemap(tilemap`Map1`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-}
+tiles.setTilemap(tilemap`Character_selection`)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
 mySprite = sprites.create(assets.image`Martin_9`, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
@@ -225,11 +211,27 @@ statusbar.value = 200
 game.onUpdateInterval(500, function () {
     if (GAME_OVER != false) {
         let CheckPoint = false
+        tiles.setTilemap(tilemap`level24`)
+        game.showLongText("U dead", DialogLayout.Center)
         if (CheckPoint == false) {
-            game.over(false, effects.blizzard)
-            game.reset()
-        } else if (false) {
-        	
+            if (Map == 1) {
+                tiles.setTilemap(tilemap`Map1`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(21, 55))
+            } else if (Map == 2) {
+                tiles.setTilemap(tilemap`Laberinto_map2`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(82, 36))
+            } else if (Map == 3) {
+                tiles.setTilemap(tilemap`Map1`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+            } else if (Map == 4) {
+                tiles.setTilemap(tilemap`Character_selection`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+            } else {
+                tiles.setTilemap(tilemap`Map1`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+            }
+            statusbar.value = 200
+            GAME_OVER = false
         }
     }
 })
