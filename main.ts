@@ -1,6 +1,77 @@
 namespace SpriteKind {
     export const Secondary = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    if (Map == 0) {
+        tiles.setTilemap(tilemap`Map1`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(15, 59))
+        Map = 1
+        Y_CheckPoint = 21
+        X_CheckPoint = 42
+        pause(100)
+        music.playMelody("E - E - E - E - ", 640)
+        if (Martin) {
+            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+        } else if (Esteban) {
+            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+        } else if (Carla) {
+            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
+            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+        }
+    } else if (Map == 1) {
+        if (mySprite.x == 2 && mySprite.y == 39) {
+            tiles.setTilemap(tilemap`Laberinto_map2`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(81, 38))
+            Map = 2
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.x == 17 && mySprite.y == 23) {
+            tiles.setTilemap(tilemap`Laberinto_map2`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 38))
+            Map = 2
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.x == 126) {
+            tiles.setTilemap(tilemap`Map7`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 51))
+            Map = 3
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.y == 99) {
+            tiles.setTilemap(tilemap`Map0`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(40, 2))
+            Map = 4
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.x == 0) {
+            tiles.setTilemap(tilemap`Map5`)
+            if (mySprite.y <= 28) {
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 9))
+            } else {
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 59))
+            }
+            Map = 5
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        }
+    } else if (Map == 2) {
+        if (mySprite.y == 39) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(17, 24))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        }
+    }
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Martin) {
         while (controller.up.isPressed()) {
@@ -71,41 +142,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite.setImage(assets.image`Carla_6`)
             pause(100)
         }
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (sprite, location) {
-    if (tiles.tileAtLocationEquals(tiles.getTileLocation(17, 5), sprites.builtin.forestTiles10) || tiles.tileAtLocationEquals(tiles.getTileLocation(17, 4), sprites.builtin.forestTiles10)) {
-        tiles.setTilemap(tilemap`Map1`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(15, 59))
-        Map = 1
-        Y_CheckPoint = 21
-        X_CheckPoint = 42
-        pause(100)
-        music.playMelody("E - E - E - E - ", 640)
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        }
-    } else if (tiles.tileAtLocationEquals(tiles.getTileLocation(64, 25), sprites.builtin.forestTiles10)) {
-        tiles.setTilemap(tilemap`Laberinto_map2`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(84, 38))
-        Map = 2
-        Y_CheckPoint = 84
-        X_CheckPoint = 38
-        pause(100)
-        music.playMelody("E - E - E - E - ", 640)
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
@@ -181,9 +217,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Martin`, function (sprite, lo
     Esteban = false
     Carla = false
 })
+let projectile: Sprite = null
 let PersonajeSec2: Sprite = null
 let PersconajeSec1: Sprite = null
-let projectile: Sprite = null
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 let X_CheckPoint = 0
@@ -197,7 +233,7 @@ GAME_OVER = false
 Martin = true
 Carla = false
 Esteban = false
-Map = 4
+Map = 0
 Y_CheckPoint = 3
 X_CheckPoint = 3
 tiles.setTilemap(tilemap`Character_selection`)
@@ -221,14 +257,17 @@ game.onUpdateInterval(500, function () {
                 tiles.setTilemap(tilemap`Laberinto_map2`)
                 tiles.placeOnTile(mySprite, tiles.getTileLocation(82, 36))
             } else if (Map == 3) {
-                tiles.setTilemap(tilemap`Map1`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+                tiles.setTilemap(tilemap`Map7`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 51))
             } else if (Map == 4) {
-                tiles.setTilemap(tilemap`Character_selection`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+                tiles.setTilemap(tilemap`Map0`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(68, 29))
+            } else if (Map == 5) {
+                tiles.setTilemap(tilemap`Map5`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(98, 109))
             } else {
-                tiles.setTilemap(tilemap`Map1`)
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+                tiles.setTilemap(tilemap`Map6`)
+                tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 25))
             }
             statusbar.value = 200
             GAME_OVER = false
