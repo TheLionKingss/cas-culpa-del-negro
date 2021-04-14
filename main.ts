@@ -27,49 +27,70 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
             tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
         }
     } else if (Map == 1) {
-        if (mySprite.x == 2 && mySprite.y == 39) {
+        if (mySprite.tileKindAt(TileDirection.Top, assets.tile`myTile1`)) {
             tiles.setTilemap(tilemap`Laberinto_map2`)
             tiles.placeOnTile(mySprite, tiles.getTileLocation(81, 38))
             Map = 2
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (mySprite.x == 17 && mySprite.y == 23) {
+        } else if (mySprite.tileKindAt(TileDirection.Top, assets.tile`myTile5`)) {
             tiles.setTilemap(tilemap`Laberinto_map2`)
             tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 38))
             Map = 2
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (mySprite.x == 126) {
+        } else if (mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile3`)) {
             tiles.setTilemap(tilemap`Map7`)
             tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 51))
             Map = 3
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (mySprite.y == 99) {
+        } else if (mySprite.tileKindAt(TileDirection.Bottom, assets.tile`myTile2`)) {
             tiles.setTilemap(tilemap`Map0`)
             tiles.placeOnTile(mySprite, tiles.getTileLocation(40, 2))
             Map = 4
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (mySprite.x == 0) {
+        } else if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile6`)) {
             tiles.setTilemap(tilemap`Map5`)
-            if (mySprite.y <= 28) {
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 9))
-            } else {
-                tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 59))
-            }
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 9))
+            Map = 5
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile4`)) {
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(97, 59))
             Map = 5
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
         }
     } else if (Map == 2) {
-        if (mySprite.y == 39) {
+        if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile2`)) {
             tiles.setTilemap(tilemap`Map1`)
             tiles.placeOnTile(mySprite, tiles.getTileLocation(17, 24))
             Map = 1
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
         }
+    } else if (Map == 3) {
+    	
+    } else if (Map == 4) {
+        if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile2`)) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(17, 24))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        }
+    } else if (Map == 5) {
+        if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile2`)) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(17, 24))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        }
+    } else {
+    	
     }
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -142,6 +163,43 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite.setImage(assets.image`Carla_6`)
             pause(100)
         }
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (sprite, location) {
+    if (Map == 3) {
+        if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile6`)) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(124, 70))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (false) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(124, 70))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (false) {
+            tiles.setTilemap(tilemap`Map1`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(124, 70))
+            Map = 1
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else {
+        	
+        }
+    } else if (Map == 1) {
+    	
+    } else if (Map == 2) {
+    	
+    } else if (Map == 3) {
+    	
+    } else if (Map == 4) {
+    	
+    } else if (Map == 5) {
+    	
+    } else {
+    	
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
