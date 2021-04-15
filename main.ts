@@ -89,8 +89,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
         }
-    } else {
-    	
     }
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -173,23 +171,47 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (
             Map = 1
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (false) {
+        } else if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile4`)) {
+            tiles.setTilemap(tilemap`Map0`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(66, 29))
+            Map = 4
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile7`)) {
+            tiles.setTilemap(tilemap`Map0`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(66, 45))
+            Map = 4
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        }
+    } else if (Map == 4) {
+        if (mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile3`)) {
+            tiles.setTilemap(tilemap`Map7`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 106))
+            Map = 3
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.tileKindAt(TileDirection.Right, assets.tile`myTile8`)) {
+            tiles.setTilemap(tilemap`Map7`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(3, 119))
+            Map = 3
+            pause(100)
+            music.playMelody("E - E - E - E - ", 640)
+        } else if (mySprite.tileKindAt(TileDirection.Top, assets.tile`myTile5`)) {
             tiles.setTilemap(tilemap`Map1`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(124, 70))
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(73, 96))
             Map = 1
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
-        } else if (false) {
-            tiles.setTilemap(tilemap`Map1`)
-            tiles.placeOnTile(mySprite, tiles.getTileLocation(124, 70))
-            Map = 1
+        } else if (mySprite.tileKindAt(TileDirection.Left, assets.tile`myTile7`)) {
+            tiles.setTilemap(tilemap`Map5`)
+            tiles.placeOnTile(mySprite, tiles.getTileLocation(96, 109))
+            Map = 5
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
         } else {
         	
         }
-    } else if (Map == 1) {
-    	
     } else if (Map == 2) {
     	
     } else if (Map == 3) {
