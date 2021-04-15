@@ -10,21 +10,23 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
         X_CheckPoint = 42
         pause(100)
         music.playMelody("E - E - E - E - ", 640)
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+        if (Map == 1) {
+            if (Martin) {
+                PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+                PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+            } else if (Esteban) {
+                PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+                PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+            } else if (Carla) {
+                PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
+                PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
+                tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+            }
         }
     } else if (Map == 1) {
         if (mySprite.tileKindAt(TileDirection.Top, assets.tile`myTile1`)) {
@@ -89,6 +91,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
             pause(100)
             music.playMelody("E - E - E - E - ", 640)
         }
+    }
+    if (Map != 1) {
+        PersconajeSec1.destroy()
+        PersonajeSec2.destroy()
     }
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
