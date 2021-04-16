@@ -73,22 +73,26 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, l
     X_CheckPoint = 59
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 5) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(69, 57))
+        }
+        Reactor2 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor2,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(31, 94))
         }
     }
 })
@@ -135,22 +139,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, 
     X_CheckPoint = 45
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 4) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 4) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(35, 55))
         }
     }
 })
@@ -166,22 +164,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile7`, function (sprite, l
     X_CheckPoint = 119
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 3) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 3) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(55, 88))
         }
     }
 })
@@ -220,22 +212,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile12`, function (sprite, 
     X_CheckPoint = 51
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 3) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 3) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(55, 88))
         }
     }
 })
@@ -298,22 +284,26 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, l
     X_CheckPoint = 9
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 5) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(69, 57))
+        }
+        Reactor2 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor2,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(31, 94))
         }
     }
 })
@@ -325,24 +315,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, 
     X_CheckPoint = 38
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        }
-    }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles10, function (sprite, location) {
     if (Map == 3) {
@@ -416,22 +388,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, 
     X_CheckPoint = 25
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 6) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 6) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(35, 24))
         }
     }
 })
@@ -467,22 +433,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, 
     X_CheckPoint = 119
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 3) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 3) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(55, 88))
         }
     }
 })
@@ -562,22 +522,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, l
     X_CheckPoint = 1
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 4) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 4) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(35, 55))
         }
     }
 })
@@ -589,22 +543,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, l
     X_CheckPoint = 106
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 3) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 3) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(55, 88))
         }
     }
 })
@@ -643,22 +591,26 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, 
     X_CheckPoint = 109
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 5) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(69, 57))
+        }
+        Reactor2 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor2,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 5) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(31, 94))
         }
     }
 })
@@ -675,22 +627,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, 
     X_CheckPoint = 29
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 4) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 4) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(35, 55))
         }
     }
 })
@@ -702,26 +648,22 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile11`, function (sprite, 
     X_CheckPoint = 57
     pause(100)
     music.playMelody("E - E - E - E - ", 640)
-    if (Map == 1) {
-        if (Martin) {
-            PersconajeSec1 = sprites.create(assets.image`Esteban_11`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Esteban) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Carla_14`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
-        } else if (Carla) {
-            PersconajeSec1 = sprites.create(assets.image`Martin_13`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersconajeSec1, tiles.getTileLocation(14, 5))
-            PersonajeSec2 = sprites.create(assets.image`Esteban_8`, SpriteKind.Secondary)
-            tiles.placeOnTile(PersonajeSec2, tiles.getTileLocation(14, 10))
+    if (Map == 4) {
+        Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+        animation.runImageAnimation(
+        Reactor1,
+        assets.animation`Anim_Reactor`,
+        300,
+        true
+        )
+        if (Map == 4) {
+            tiles.placeOnTile(Reactor1, tiles.getTileLocation(35, 55))
         }
     }
 })
 let projectile: Sprite = null
+let Reactor2: Sprite = null
+let Reactor1: Sprite = null
 let PersonajeSec2: Sprite = null
 let PersconajeSec1: Sprite = null
 let statusbar: StatusBarSprite = null
@@ -748,18 +690,6 @@ scene.cameraFollowSprite(mySprite)
 statusbar = statusbars.create(16, 2, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite)
 statusbar.value = 200
-let Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
-animation.runImageAnimation(
-Reactor1,
-assets.animation`Anim_Reactor`,
-300,
-true
-)
-if (Map == 6) {
-    tiles.placeOnTile(Reactor1, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
-} else {
-	
-}
 game.onUpdateInterval(500, function () {
     if (GAME_OVER != false) {
         let CheckPoint = false
