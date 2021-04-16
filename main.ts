@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const Secondary = SpriteKind.create()
+    export const Reactor = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map1`)
@@ -747,6 +748,18 @@ scene.cameraFollowSprite(mySprite)
 statusbar = statusbars.create(16, 2, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite)
 statusbar.value = 200
+let Reactor1 = sprites.create(assets.image`myImage0`, SpriteKind.Player)
+animation.runImageAnimation(
+Reactor1,
+assets.animation`Anim_Reactor`,
+300,
+true
+)
+if (Map == 6) {
+    tiles.placeOnTile(Reactor1, tiles.getTileLocation(X_CheckPoint, Y_CheckPoint))
+} else {
+	
+}
 game.onUpdateInterval(500, function () {
     if (GAME_OVER != false) {
         let CheckPoint = false
