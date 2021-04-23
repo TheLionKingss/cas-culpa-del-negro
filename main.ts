@@ -64,6 +64,10 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
             pause(100)
         }
     }
+    UP = true
+    RIGHT = false
+    LEFT = false
+    DOWN = false
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map5`)
@@ -173,8 +177,49 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, 
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    projectile = sprites.createProjectileFromSprite(assets.image`Proyectile_of_sorts`, mySprite, 69, 0)
-    music.pewPew.play()
+    if (Martin) {
+        if (DOWN) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BOOK`, mySprite, 0, 100)
+            music.pewPew.play()
+        } else if (LEFT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BOOK`, mySprite, -100, 0)
+            music.pewPew.play()
+        } else if (RIGHT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BOOK`, mySprite, 100, 0)
+            music.pewPew.play()
+        } else if (UP) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BOOK`, mySprite, 0, -100)
+            music.pewPew.play()
+        }
+    } else if (Esteban) {
+        if (DOWN) {
+            projectile = sprites.createProjectileFromSprite(assets.image`Basquetball`, mySprite, 0, 100)
+            music.pewPew.play()
+        } else if (LEFT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`Basquetball`, mySprite, -100, 0)
+            music.pewPew.play()
+        } else if (RIGHT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`Basquetball`, mySprite, 100, 0)
+            music.pewPew.play()
+        } else if (UP) {
+            projectile = sprites.createProjectileFromSprite(assets.image`Basquetball`, mySprite, 0, -100)
+            music.pewPew.play()
+        }
+    } else if (Carla) {
+        if (DOWN) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BAG`, mySprite, 0, 100)
+            music.pewPew.play()
+        } else if (LEFT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BAG`, mySprite, -100, 0)
+            music.pewPew.play()
+        } else if (RIGHT) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BAG`, mySprite, 100, 0)
+            music.pewPew.play()
+        } else if (UP) {
+            projectile = sprites.createProjectileFromSprite(assets.image`BAG`, mySprite, 0, -100)
+            music.pewPew.play()
+        }
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile7`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map7`)
@@ -268,6 +313,10 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
             pause(100)
         }
     }
+    LEFT = true
+    DOWN = false
+    RIGHT = false
+    UP = false
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map1`)
@@ -444,6 +493,10 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
             pause(100)
         }
     }
+    RIGHT = true
+    LEFT = false
+    UP = false
+    DOWN = false
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map7`)
@@ -533,6 +586,10 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
             pause(100)
         }
     }
+    UP = false
+    LEFT = false
+    DOWN = true
+    RIGHT = false
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     tiles.setTilemap(tilemap`Map0`)
@@ -687,6 +744,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile11`, function (sprite, 
 let projectile: Sprite = null
 let Reactor2: Sprite = null
 let Reactor1: Sprite = null
+let DOWN = false
+let LEFT = false
+let RIGHT = false
+let UP = false
 let PersonajeSec2: Sprite = null
 let PersconajeSec1: Sprite = null
 let statusbar: StatusBarSprite = null
